@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #000000
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    background: url('background.png') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row; /* Change from column to row */
+    padding: 0 1rem; /* Add padding to ensure content is not too close to the edges */
+    margin-top: -4%;
+}
+
+#hero .content, #hero .video {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .content {
+    flex: 1;
+    margin-left: 5%;
+}
+
+#hero .video {
+    flex: 1;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 30px #000000
+}
+
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0px 0px 30px #000000
+}
+
+.cta-button {
+    background: #ff4742;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover {
+    background: #e43d37;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    #hero {
+        flex-direction: column; /* Change flex direction to column */
+    }
+    #hero .video {
+        order: -1; /* Display the video above the content */
+    }
+    #hero .content {
+        margin-top: -20%;
+    }
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    #hero {
+        transform: scale(0.70); /* Scale content to 75% */
+    }
+    #hero .video {
+        margin-top: -10%;
+        order: -1; /* Display the video above the content */
+    }
+}
+
+/* Media Query for screens smaller than 414px */
+@media (max-width: 414px) {
+    #hero {
+        transform: scale(0.50); /* Scale content to 75% */
+    }
+
+    #hero .video {
+        margin-top: -50%;
+        order: -1; /* Display the video above the content */
+    }
+}
